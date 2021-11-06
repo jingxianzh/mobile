@@ -30,8 +30,8 @@ a:visited{color:royalblue}
 }
 
 .active a {
-    color:lightseagreen;
-    border:2px solid lightseagreen;
+    color:black;
+    border:2px solid black;
 }
 
 h1{
