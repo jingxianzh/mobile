@@ -1,0 +1,124 @@
+body{
+	font-size:150%;
+    background-color:#eaf5e6;
+    font-family: 'Mali', cursive;
+}
+main{
+    margin:1%;
+    padding:1%;
+}
+
+nav ul{
+    list-style-type: none;
+  }
+
+nav li{
+    padding-right: 10px;
+  }
+
+a:visited{color:royalblue}
+
+.nav_item a:hover, a:focus{
+    color:cornflowerblue;
+    text-decoration-line:underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+.active{
+    font-weight: bold;
+}
+
+.active a {
+    color:lightseagreen;
+}
+
+h1{
+    text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+    margin:20px 0;
+}
+
+h2{
+	font-size: 1em;
+	font-weight: bold;
+    margin:15px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+
+img{
+    height: auto;
+    width: 200px;
+    border: 3px solid darkslateblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+#personal{
+    display:block;
+    margin:auto;
+}
+#skill{
+    width:100%
+}
+#projectcontent{
+    margin:auto;
+    text-align: center;
+}
+footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color:#387a38;
+    color: white;
+}
+
+@media screen and (min-width:850px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color:mediumslateblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color:royalblue;
+  }
+
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
