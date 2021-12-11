@@ -1,10 +1,12 @@
 body{
-	font-size:35px;
+	font-size:25px;
     background-color:#eaf5e6;
     font-family: 'Dongle', sans-serif;
+    line-height: 1;
 }
+
 main{
-    margin:2%;
+    margin:0;
     padding:2%;
 }
 
@@ -13,17 +15,15 @@ nav ul{
   }
 
 nav li{
-    padding-right: 10px;
-    display: inline;
-    align-items: center;
+    display: block;
   }
 
 a.skip{
     background-color: #eaf5e6;
     left: 0;
-    padding: 5px;
+    padding: 3px;
     position: relative;
-    top: -40px;
+    top: -70px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 2;
@@ -50,68 +50,33 @@ a:visited{color:royalblue}
 
 .active a {
     color:black;
-    border:2px solid black;
+    border:3px solid black;
 }
 
 h1{
     text-align: center;
 	font-size: 2em;
 	font-weight: bold;
-    margin:20px 0;
+    margin:10px 0;
+    line-height: 70%;
 }
 
 h2{
 	font-size: 1em;
 	font-weight: bold;
     margin:15px 0;
+    line-height: 70%;
+    text-align: center;
 }
 
 mark{
     font-weight: bold;
 }
 
-/* .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-  } */
-
-
 .grid-container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 }
-
-@media screen and (min-width: 750px) {
-  .grid-container{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-  }
-  body{
-	font-size:55px;
-    background-color:#eaf5e6;
-    font-family: 'Dongle', sans-serif;
-}
-.grid-gallery{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
- }
-
-h1{
-    text-align: center;
-	font-size: 3em;
-	font-weight: bold;
-    margin:20px 0;
-}
-h2{
-	font-size: 2em;
-	font-weight: bold;
-    margin:15px 0;
-}
-
-}
-
-
 
 img{
     height: auto;
@@ -121,45 +86,167 @@ img{
     border-radius: 10px;
     margin: 10px;
 }
-#personal{
+
+/* #personal{
     display:block;
     margin:auto;
-}
+} */
+
 #skill{
     width:100%
 }
-#projectcontent{
+/* .projectcontent{
     margin:auto;
     text-align: center;
-}
+} */
 footer{
     text-align: center;
     padding: 10px 0;
     background-color:#387a38;
     color: white;
 }
+.container{
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center; /* Parallax effect */
+    background-size: cover; /* Parallax effect */
+    height: auto; /* Parallax effect */
+    opacity: 0.8;
+    font-size: 35px;
+}
+form label{
+    color: white;
+}
 
-/* @media screen and (min-width:1200px){
-    header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    margin:auto;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+    padding: 20px 0;
+  }
+
+@media screen and (min-width: 750px) {
+    nav li{
+        padding-right: 20px;
+        align-items: center;
+      }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
+    body{
+      font-size:55px;
+      background-color:#eaf5e6;
+      font-family: 'Dongle', sans-serif;
+    }
+    .grid-gallery{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1{
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin:20px 0;
+    }
+    h2{
+      font-size: 1em;
+      font-weight: bold;
+      margin:20px 0;
+    }
+    .flip-card {
+        width: 60%;
+        height: 70%;
+      }
+    .flip-card-back {
+        padding: 50px 0;
+      }
+
+  .pbnimages{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+  }
+
+  .flyer{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+  .carrental{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+  }
+
+  .parking{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+  }
+}
+
+@media screen and (min-width:1200px){
     .nav_links{
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
-} */
+    .flip-card {
+        width: 60%;
+        height: 70%;
+      }
+    .flip-card-back {
+        padding: 35px 0;
+      }
+}
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
+    padding: 10px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
+    border-radius: 3px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 3px; /* Add a top margin */
+    margin-bottom: 10px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
@@ -182,4 +269,16 @@ input[type=text], select, textarea {
   .container {
     border-radius: 5px;
     padding: 20px;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+    /*Turn off transition*/
+    .skip a{
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+    /*Turn off parallax*/
+    .container{
+      background-attachment: initial;
+    }
   }
